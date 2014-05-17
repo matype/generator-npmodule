@@ -5,12 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "tape test"
-  },
-  <% if (cmd) { %>
+  },<% if (cmd) { %>
   "bin": {
     "<%= moduleName %>": "bin/cmd.js"
-  },
-  <% } %>
+  },<% } %>
   "repository": {
     "type": "git",
     "url": "git://github.com/<%= github %>/<%= moduleName %>/git"
