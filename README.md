@@ -1,6 +1,6 @@
 # generator-npmodule [![Build Status](https://secure.travis-ci.org/morishitter/generator-npmodule.svg)](https://travis-ci.org/morishitter/generator-npmodule)
 
-> [Yeoman](http://yeoman.io) generator
+> [Yeoman](http://yeoman.io) generator of node packaged module
 
 
 ## Getting Started
