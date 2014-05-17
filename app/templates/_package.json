@@ -8,7 +8,7 @@
   },
   <% if (cmd) { %>
   "bin": {
-    "<%= modulename %>": "bin/cmd.js"
+    "<%= moduleName %>": "bin/cmd.js"
   },
   <% } %>
   "repository": {

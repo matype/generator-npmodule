@@ -73,14 +73,13 @@ NpmoduleGenerator.prototype.ask = function () {
 
   this.prompt(prompts, function (props) {
     this.moduleName = this._.slugify(props.moduleName);
-    this.moduleVarname = this._.camelize(props.moduleName);
+    this.moduleVarName = this._.camelize(props.moduleName);
     this.cmd = props.cmd;
     this.description = props.description;
     this.keywords = props.keywords;
     this.github = props.github;
     this.author = props.author;
     this.copyrightName = props.author.replace(/<[^>]*?>/gm, '').trim();
-    this.testfw = props.testfw;
 
     this.dequote = function (str) {
       return str.replace(/\"/gm, '\\"');

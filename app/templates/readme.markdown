@@ -14,4 +14,4 @@ $ npm install <%= moduleName %>
 
 The MIT License (MIT)
 
-Copyright (c) <%= new Date(.getFullYear( %>, <%= copyrightName %>))
+Copyright (c) <%= new Date().getFullYear() %>, <%= copyrightName %>
