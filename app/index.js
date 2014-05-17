@@ -42,7 +42,7 @@ NpmoduleGenerator.prototype.ask = function () {
       type: 'confirm',
       name: 'cmd',
       message: 'command line tool?: ',
-      default: false
+      default: true
     },
     {
       type: 'input',
