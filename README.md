@@ -1,4 +1,4 @@
-# generator-npmodule [![Build Status](https://secure.travis-ci.org/morishitter/generator-npmodule.png?branch=master)](https://travis-ci.org/morishitter/generator-npmodule)
+# generator-npmodule [![Build Status](https://secure.travis-ci.org/morishitter/generator-npmodule.svg)](https://travis-ci.org/morishitter/generator-npmodule)
 
 > [Yeoman](http://yeoman.io) generator
 
