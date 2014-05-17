@@ -1,5 +1,26 @@
 {
-  "name": "package",
-  "version": "0.0.0",
-  "dependencies": {}
+  "name": "<%= moduleName %>",
+  "version": "0.0.1",
+  "description": "<%= dequote(description) %>",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test"
+  },
+  <% if (cmd) { %>
+  "bin": {
+    "<%= modulename %>": "bin/cmd.js"
+  },
+  <% } %>
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/<%= github %>/<%= moduleName %>/git"
+  },
+  "keywords": <%= JSON.stringify(keywords) %>,
+  "author": "<%= dequote(author) %>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "tap": "*",
+    "tape": "*"
+  }
 }

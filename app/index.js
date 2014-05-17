@@ -1,7 +1,11 @@
 'use strict';
+
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
+var gitconfig = require('git-config');
+
+module.exports = NpmoduleGenerator;
 
 function NpmoduleGenerator (args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
@@ -13,9 +17,9 @@ function NpmoduleGenerator (args, options, config) {
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
 }
 
-Npmodule.prototype = new yeoman.generators.Base;
+util.inherits(NpmoduleGenerator, yeoman.generators.Base);
 
-Npmodule.prototype.ask = function () {
+NpmoduleGenerator.prototype.ask = function () {
   var cb = this.async();
 
   console.log(this.yeoman);
@@ -36,8 +40,8 @@ Npmodule.prototype.ask = function () {
     },
     {
       type: 'confirm',
-      name: 'cli',
-      message: 'cli tool?: ',
+      name: 'cmd',
+      message: 'command line tool?: ',
       default: false
     },
     {
@@ -70,7 +74,7 @@ Npmodule.prototype.ask = function () {
   this.prompt(prompts, function (props) {
     this.moduleName = this._.slugify(props.moduleName);
     this.moduleVarname = this._.camelize(props.moduleName);
-    this.cli = props.cli;
+    this.cmd = props.cmd;
     this.description = props.description;
     this.keywords = props.keywords;
     this.github = props.github;
@@ -83,14 +87,14 @@ Npmodule.prototype.ask = function () {
     };
 
     cb();
-  }).bind(this);
+  }.bind(this));
 };
 
-Npmodule.prototype.build = function () {
+NpmoduleGenerator.prototype.build = function () {
   this.template('_package.json', 'package.json');
   this.template('readme.markdown', 'readme.markdown');
 
-  if (this.cli) {
+  if (this.cmd) {
     this.mkdir('bin');
     this.copy('cmd.js', 'bin/cmd.js');
   }
