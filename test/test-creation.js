@@ -22,7 +22,7 @@ describe('npmodule generator', function () {
       'readme.markdown',
       'LICENSE',
       'test/index.js',
-      'bin/cmd.js',
+      'bin/mymodule',
       'package.json'
     ];
 

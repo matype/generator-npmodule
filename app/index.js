@@ -95,7 +95,7 @@ NpmoduleGenerator.prototype.build = function () {
 
   if (this.cmd) {
     this.mkdir('bin');
-    this.copy('cmd.js', 'bin/cmd.js');
+    this.copy('cmd.js', 'bin/' + this.moduleName);
   }
 
   this.copy('_index.js', 'index.js');

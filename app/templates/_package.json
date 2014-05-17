@@ -7,7 +7,7 @@
     "test": "tape test"
   },<% if (cmd) { %>
   "bin": {
-    "<%= moduleName %>": "bin/cmd.js"
+    "<%= moduleName %>": "bin/<%= moduleName %>"
   },<% } %>
   "repository": {
     "type": "git",
