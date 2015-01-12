@@ -1,6 +1,6 @@
 {
   "name": "generator-npmodule",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yeoman generator of node packaged module",
   "license": "MIT",
   "main": "app/index.js",
