@@ -92,10 +92,10 @@ NpmoduleGenerator.prototype.ask = function () {
 NpmoduleGenerator.prototype.build = function () {
   this.template('_package.json', 'package.json');
   this.template('readme.markdown', 'readme.markdown');
+  this.template('test.js', 'test.js')
 
   if (this.cmd) {
-    this.mkdir('bin');
-    this.copy('cmd.js', 'bin/' + this.moduleName);
+    this.copy('cli.js', 'cli.js');
   }
 
   this.copy('_index.js', 'index.js');
@@ -103,7 +103,4 @@ NpmoduleGenerator.prototype.build = function () {
   this.copy('editorconfig', '.editorconfig');
   this.copy('travis.yml', '.travis.yml');
   this.copy('LICENSE', 'license');
-
-  this.mkdir('test');
-  this.template('test.js', 'test/index.js')
 };
