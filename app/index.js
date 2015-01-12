@@ -100,8 +100,9 @@ NpmoduleGenerator.prototype.build = function () {
 
   this.copy('_index.js', 'index.js');
   this.copy('gitignore', '.gitignore');
-  this.copy('LICENSE', 'LICENSE');
+  this.copy('editorconfig', '.editorconfig');
   this.copy('travis.yml', '.travis.yml');
+  this.copy('LICENSE', 'license');
 
   this.mkdir('test');
   this.template('test.js', 'test/index.js')
