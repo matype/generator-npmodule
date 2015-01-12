@@ -22,8 +22,8 @@ describe('npmodule generator', function () {
       '.editorconfig',
       'readme.markdown',
       'license',
-      'test/index.js',
-      'bin/mymodule',
+      'test.js',
+      'cli.js',
       'package.json'
     ];
 
@@ -32,7 +32,7 @@ describe('npmodule generator', function () {
       'description': 'sugoi module',
       'keywords': 'sugoi',
       'cmd': true,
-      'githu': 'morishitter',
+      'github': 'morishitter',
       'author': 'Masaaki Morishita'
     });
 
