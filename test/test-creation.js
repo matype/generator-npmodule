@@ -19,8 +19,9 @@ describe('npmodule generator', function () {
       'index.js',
       '.gitignore',
       '.travis.yml',
+      '.editorconfig',
       'readme.markdown',
-      'LICENSE',
+      'license',
       'test/index.js',
       'bin/mymodule',
       'package.json'
