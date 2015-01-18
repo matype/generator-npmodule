@@ -2,7 +2,7 @@
 
 <%= description %>
 
-## Installation
+## Install
 
 ```shell
 $ npm install <%= moduleName %>

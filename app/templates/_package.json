@@ -4,10 +4,10 @@
   "description": "<%= dequote(description) %>",
   "main": "index.js",
   "scripts": {
-    "test": "tape test"
+    "test": ""
   },<% if (cmd) { %>
   "bin": {
-    "<%= moduleName %>": "bin/<%= moduleName %>"
+    "<%= moduleName %>": "cli.js"
   },<% } %>
   "repository": {
     "type": "git",
@@ -17,8 +17,5 @@
   "author": "<%= dequote(author) %>",
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {
-    "tap": "*",
-    "tape": "*"
-  }
+  "devDependencies": {}
 }
