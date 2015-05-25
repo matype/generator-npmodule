@@ -23,8 +23,9 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "yeoman-generator": "~0.16.0",
-    "git-config": "0.0.6"
+    "git-config": "0.0.6",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "~0.16.0"
   },
   "devDependencies": {
     "mocha": "*"

@@ -20,9 +20,10 @@ describe('npmodule generator', function () {
       '.gitignore',
       '.travis.yml',
       '.editorconfig',
-      'readme.markdown',
-      'license',
-      'test.js',
+      'README.md',
+      'CHANGELOG.md',
+      'LICENSE',
+      'test/index.js',
       'cli.js',
       'package.json'
     ];

@@ -4,7 +4,7 @@
   "description": "<%= dequote(description) %>",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "tape test"
   },<% if (cmd) { %>
   "bin": {
     "<%= moduleName %>": "cli.js"

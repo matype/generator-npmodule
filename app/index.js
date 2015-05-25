@@ -2,6 +2,7 @@
 
 var util = require('util');
 var path = require('path');
+var mkdirp = require('mkdirp');
 var yeoman = require('yeoman-generator');
 var gitconfig = require('git-config');
 
@@ -90,9 +91,14 @@ NpmoduleGenerator.prototype.ask = function () {
 };
 
 NpmoduleGenerator.prototype.build = function () {
+  mkdirp('test', function (err) {
+    if (err) throw err;
+  });
+
   this.template('_package.json', 'package.json');
-  this.template('readme.markdown', 'readme.markdown');
-  this.template('test.js', 'test.js')
+  this.template('readme.markdown', 'README.md');
+  this.template('changelog.markdown', 'CHANGELOG.md');
+  this.template('test.js', 'test/index.js')
 
   if (this.cmd) {
     this.copy('cli.js', 'cli.js');
@@ -102,5 +108,5 @@ NpmoduleGenerator.prototype.build = function () {
   this.copy('gitignore', '.gitignore');
   this.copy('editorconfig', '.editorconfig');
   this.copy('travis.yml', '.travis.yml');
-  this.copy('LICENSE', 'license');
+  this.copy('LICENSE', 'LICENSE');
 };
