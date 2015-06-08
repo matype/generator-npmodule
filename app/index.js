@@ -32,7 +32,7 @@ NpmoduleGenerator.prototype.ask = function () {
       type: 'input',
       name: 'moduleName',
       message: 'module name: ',
-      default: process.env.PWD
+      default: path.basename(process.env.PWD)
     },
     {
       type: 'input',
